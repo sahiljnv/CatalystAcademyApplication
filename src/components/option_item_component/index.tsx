@@ -3,14 +3,15 @@ import {styles} from './style';
 import React from 'react';
 import {PRIMARY500, WHITE_COLOR} from '../../style/globel_style_color';
 import RadioButton from '../radio_button';
-import {ListProps} from '../../data/data';
+import {OptionProp} from '../../data/data';
+import ButtonIion from 'react-native-vector-icons/MaterialCommunityIcons';
+
 type OptionProps = {
-  selected: boolean;
   onPress: (id: number) => void;
-  option: ListProps;
+  option: OptionProp;
 };
 const OptionItem = (props: OptionProps) => {
-  const {selected, onPress, option} = props;
+  const {onPress, option} = props;
   return (
     <View style={styles.selectOptionContainer}>
       <RadioButton selected={option.selected} />
@@ -18,12 +19,20 @@ const OptionItem = (props: OptionProps) => {
         <View
           style={[
             styles.optionContainer,
-            {backgroundColor: selected ? PRIMARY500 : WHITE_COLOR},
+            {backgroundColor: option.selected ? PRIMARY500 : WHITE_COLOR},
           ]}>
+          <View style={styles.iconContainer}>
+            <ButtonIion
+              name={option.iconName}
+              color={option.selected ? WHITE_COLOR : PRIMARY500}
+              size={25}
+            />
+          </View>
+
           <Text
             style={[
               styles.optionText,
-              {color: selected ? WHITE_COLOR : PRIMARY500},
+              {color: option.selected ? WHITE_COLOR : PRIMARY500},
             ]}>
             {option.name}
           </Text>

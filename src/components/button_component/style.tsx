@@ -1,5 +1,8 @@
 import {StyleSheet} from 'react-native';
-import {PRIMARY500, WHITE_COLOR} from '../../style/globel_style_color';
+import {
+  PRIMARY500,
+  WHITE_COLOR,
+} from '../../style/globel_style_color';
 
 export const styles = StyleSheet.create({
   innerButton: {

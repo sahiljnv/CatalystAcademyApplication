@@ -2,7 +2,6 @@ import {StyleSheet} from 'react-native';
 import {
   PRIMARY500,
   STAGE_NAME,
-  WHITE_COLOR,
 } from '../../style/globel_style_color';
 export const styles = StyleSheet.create({
   circle: {
@@ -11,12 +10,10 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: PRIMARY500,
     borderRadius: 23,
-    backgroundColor: PRIMARY500,
     justifyContent: 'center',
     alignItems: 'center',
   },
   circleNum: {
-    color: WHITE_COLOR,
     fontSize: 18,
   },
   circleContainer: {
@@ -32,6 +29,7 @@ export const styles = StyleSheet.create({
   stageName: {
     color: STAGE_NAME,
     fontSize: 12,
+    paddingTop: 5,
   },
   hrLiseContainer: {
     flexGrow: 1,

@@ -1,4 +1,4 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 import {
   BACKGROUND_COLOR,
   BLACK_COLOR,
@@ -7,7 +7,7 @@ import {
 } from '../../style/globel_style_color';
 export const styles = StyleSheet.create({
   mainContainer: {
-    height: '100%',
+    height: Dimensions.get('screen').height,
     width: '100%',
     backgroundColor: BACKGROUND_COLOR,
   },
@@ -15,6 +15,7 @@ export const styles = StyleSheet.create({
     color: BLACK_COLOR,
     padding: 20,
     fontSize: 24,
+    opacity: 0.7,
   },
   stageHeaderContainer: {
     height: '20%',
@@ -45,17 +46,27 @@ export const styles = StyleSheet.create({
     textAlignVertical: 'top',
     backgroundColor: WHITE_COLOR,
     color: BLACK_COLOR,
+    borderRadius: 5,
+    paddingLeft: 10,
   },
   textInput: {
     color: BLACK_COLOR,
     backgroundColor: WHITE_COLOR,
+    borderRadius: 5,
+    paddingLeft: 10,
   },
   inputConatiner: {
     paddingVertical: 10,
   },
   buttonContainer: {
-    justifyContent: 'center',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
     alignItems: 'center',
     margin: 15,
+  },
+  optionView: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
   },
 });
